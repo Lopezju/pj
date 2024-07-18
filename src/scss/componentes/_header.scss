@@ -1,0 +1,81 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+ .inicio{
+    //background-image: url(../img/banner12.jpg);  
+   
+}
+
+.header{
+  //background-image: url(../img/banner12.jpg);  
+ 
+
+  //padding: 1rem 0 1rem 0;
+
+    &.inicio{
+        background-color: v.$blanco;
+        background-position: center center;
+        background-size: cover ;
+       // background: rgb(2,2,2);
+       // background: radial-gradient(circle, rgba(2,2,2,1) 7%, rgba(86,193,143,0.9668242296918768) 99%);
+
+        
+    
+        
+
+        @include m.tablet {
+            min-height: 5rem;
+            
+        }
+
+        .contenido-header{
+            @include m.tablet {
+                min-height: 5rem;
+                
+            }
+        }
+
+    }
+    }
+
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+
+   
+
+     .text{
+        text-align: center;
+        color: v.$negro;
+        font-weight: v.$negro;
+        line-height: 2;
+        max-width: 60rem;
+        background-image: url(../img/banner25.webp);
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 4rem;
+        
+    }
+
+    .text{
+        @include m.tablet{
+            font-size: 7rem;
+        }
+    }
+}
+
+.imagen{
+       display: block;
+       width: 60rem;
+       display: flex;
+       justify-content: center;
+       @include m.desktop{
+          width: 100%;
+       }
+}

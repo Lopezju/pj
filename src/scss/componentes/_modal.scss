@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.modal{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.404);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.formulario{
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:50px;
+        max-width: 100rem;
+
+        &.animar{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+        
+    }
+    background-color: v.$blanco;
+    padding: 2rem;
+    margin: 0 auto;
+    transform: translateY(-70rem);
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+
+    &.animar{
+        position: relative;
+        top: 50%;
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+    
+    &.cerrar{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    
+
+   
+}
+.fl{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+    
+    

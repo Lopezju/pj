@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.login{
+    margin-top: 5rem;
+  .titulo{
+    background: rgb(2,2,2);
+    background: linear-gradient(87deg, rgba(2,2,2,1) 0%, rgba(82,190,172,1) 99%);
+    color: transparent;
+    background-clip: text;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  
+}

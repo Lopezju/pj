@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+@include m.tablet {
+    .iconos-nosotros{
+        @include m.grid(3, 2rem); 
+     }
+     
+}
+
+
+.icono{
+    text-align: center;
+    img{
+        height: 10rem;
+    }
+
+    h3{
+        text-transform: uppercase;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .links li {
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+  .links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6f66c7;
+    border-radius: 50%;
+    padding: 15px;
+    color: #fff;
+    transition: background-color 0.2s linear;
+  }
+  
+  .links li a .icon {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+  
+  .links li a:hover {
+    background-color: #257381;
+  }
+  
+  .links li a:hover .icon {
+    animation: slide-icon 1s linear 1;
+  }
