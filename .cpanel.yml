@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/pjsaltillo/public_html/
+    - /bin/rsync -av UpTask_MVC $DEPLOYPATH
+    
